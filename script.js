@@ -251,3 +251,30 @@ else{
     dashboardBtn.classList.remove("active");
 
 }
+
+
+
+const mobileDashboard = document.getElementById("mobileDashboard");
+const mobileTasks = document.getElementById("mobileTasks");
+
+mobileDashboard.addEventListener("click", () => {
+
+    dashboardPage.style.display = "block";
+    tasksPage.style.display = "none";
+
+    dashboardBtn.classList.add("active");
+    tasksBtn.classList.remove("active");
+
+    localStorage.setItem("currentPage","dashboard");
+});
+
+mobileTasks.addEventListener("click", () => {
+
+    dashboardPage.style.display = "none";
+    tasksPage.style.display = "block";
+
+    tasksBtn.classList.add("active");
+    dashboardBtn.classList.remove("active");
+
+    localStorage.setItem("currentPage","tasks");
+});

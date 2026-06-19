@@ -739,3 +739,41 @@ body {
     padding:25px;
     color:#7e8494;
 }
+
+.mobile-nav{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .mobile-nav{
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:70px;
+
+        background:#ffffff;
+
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+
+        box-shadow:0 -5px 20px rgba(0,0,0,0.08);
+
+        z-index:9999;
+    }
+
+    .mobile-nav button{
+        border:none;
+        background:none;
+        font-size:14px;
+        font-weight:600;
+        color:#3874ff;
+        cursor:pointer;
+    }
+
+    .main-content{
+        padding-bottom:90px;
+    }
+}
