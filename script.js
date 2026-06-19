@@ -258,6 +258,7 @@ const mobileDashboard = document.getElementById("mobileDashboard");
 const mobileTasks = document.getElementById("mobileTasks");
 
 mobileDashboard.addEventListener("click", () => {
+   
 
     dashboardPage.style.display = "block";
     tasksPage.style.display = "none";
