@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Velocity || A Complete Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div>
+                <div class="logo-section">
+                    <div class="logo-icon"><img src="logoimg.png" alt=""></div>
+                    <span>Velocity</span>
+                </div>
+
+                <div class="nav-group">
+                    <div class="nav-section-title">Menu</div>
+                    <a href="#" class="nav-item" id="dashboardBtn">
+                        <div class="nav-left">
+                            <span class="nav-icon">🔳</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+                   <a href="#" class="nav-item active" id="tasksBtn">
+                        <div class="nav-left">
+                            <span class="nav-icon">☑️</span>
+                            <span>Tasks</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <div class="nav-section-title">Messages</div>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">🟣</span>
+                            <span>Whatsapp</span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">🟢</span>
+                            <span>Reddit</span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">⚫</span>
+                            <span>GitHub</span>
+                        </div>
+                       
+                    </a>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">🔵</span>
+                            <span>Messenger</span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">🔴</span>
+                            <span>Gmail</span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <div class="nav-left">
+                            <span class="nav-icon">🔵</span>
+                            <span>Discord</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <div class="nav-left">
+                        <span class="nav-icon">⚙️</span>
+                        <span>Settings</span>
+                    </div>
+                </a>
+                <div class="toggle-container">
+                    <div class="toggle-label-wrapper">
+                        
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <div class="header-top">
+                <h1>Tasks</h1>
+                <div class="header-actions">
+                    <button class="btn-create">➕ Create Task</button>
+                    <div class="profile-hexagon">G</div>
+                </div>
+            </div>
+
+            <section id="dashboardPage">
+
+    <div class="dashboard-hero">
+        <span class="hero-pill">Velocity Workspace</span>
+
+        <h1>Move Faster. Stay Focused.</h1>
+
+        <p>
+            Organize tasks, track progress and stay productive
+            with a clean workspace built for modern teams.
+        </p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h2 id="totalTasks">0</h2>
+            <span>Total Tasks</span>
+        </div>
+
+        <div class="stat-card">
+            <h2>98%</h2>
+            <span>Completion Rate</span>
+        </div>
+
+        <div class="stat-card">
+            <h2>24/7</h2>
+            <span>Accessibility</span>
+        </div>
+
+    </div>
+
+    <div class="quote-card">
+        <p>
+            Small actions completed consistently create remarkable results.
+        </p>
+    </div>
+
+</section>
+     <section id="tasksPage">
+            <div class="view-bar">
+                <div class="view-tabs">
+                </div>
+                <div class="view-users">
+                    <div class="avatar-group">
+                        <div class="avatars-group">
+    
+</div>
+            </div>
+
+           
+
+           <div class="board-grid">
+
+    <div class="board-column">
+
+        <div class="column-header">
+            <div class="column-title-wrapper">
+                <span class="column-title">To Do</span>
+                <span class="column-count">(0)</span>
+            </div>
+
+            <div class="column-actions">
+                <span>+</span>
+                <span>•••</span>
+            </div>
+        </div>
+
+        <div class="task-list">
+
+            <div class="empty-state">
+                <div class="empty-icon">📋</div>
+                <h3>No Tasks Yet</h3>
+                <p>Create your first task and start organizing your work.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+        </section>
+            
+        </main>
+    </div>
+
+    <div class="modal" id="taskModal">
+    <div class="modal-box">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Task Title" required>
+            <textarea id="taskDesc" placeholder="Description..." rows="2" required></textarea>
+            
+            <div class="date-row">
+                <div class="date-field">
+                    <label>Task Date</label>
+                    <input type="date" id="taskDate" required>
+                </div>
+                <div class="date-field">
+                    <label>Due Date</label>
+                    <input type="date" id="taskDueDate" required>
+                </div>
+            </div>
+
+            <select id="taskPlatform">
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Reddit">Reddit</option>
+                <option value="GitHub">GitHub</option>
+                <option value="Messenger">Messenger</option>
+                <option value="Gmail">Gmail</option>
+                <option value="Discord">Discord</option>
+                <option value="Microsoft Team">Microsoft Team</option>
+                <option value="Slack">Slack</option>
+            </select>
+            <div class="modal-btns">
+                <button type="button" class="btn-sub" id="btnCancel">Cancel</button>
+                <button type="submit" class="btn-main">Add Task</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
